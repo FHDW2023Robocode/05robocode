@@ -4,16 +4,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>de.oc.robocode</groupId>
+    <groupId>de.fhdw.robocode</groupId>
+        <!--
+            Set this to your robot's name
+        -->
     <artifactId>Robot-${user.name}</artifactId>
-    <version>0.1</version>
+        <!--
+            Set this to your robot's version
+        -->
+    <version>1.0</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!--
-            Set this to your Robocode robots folder
-        -->
-        <robotlocation>P:\#\NOS\robocode\robots</robotlocation>
+        <robotlocation>./robots</robotlocation>
     </properties>
 
     <build>
@@ -23,8 +26,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.0</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -57,23 +60,9 @@
         <dependency>
             <groupId>net.sf.robocode</groupId>
             <artifactId>robocode.api</artifactId>
-            <version>1.7.4.4</version>
+            <version>1.9.5.0</version>
         </dependency>
     </dependencies>
 
-    <repositories>
-        <repository>
-            <id>lib</id>
-            <name>lib</name>
-            <releases>
-                <enabled>true</enabled>
-                <checksumPolicy>ignore</checksumPolicy>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-                <checksumPolicy>ignore</checksumPolicy>
-            </snapshots>
-            <url>file://${project.basedir}/lib</url>
-        </repository>
-    </repositories>
+    
 </project>

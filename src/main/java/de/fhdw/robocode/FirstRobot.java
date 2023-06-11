@@ -1,4 +1,4 @@
-package de.oc.robocode;
+package de.fhdw.robocode;
 
 import robocode.HitByBulletEvent;
 import robocode.Robot;
